@@ -500,8 +500,6 @@ def configure_unix_toolchain(repository_ctx, cpu_value, overriden_tools):
                 "-z",
             ) + (
                 [
-                    "-undefined",
-                    "dynamic_lookup",
                     "-headerpad_max_install_names",
                 ] if darwin else bin_search_flag + [
                     # Gold linker only? Can we enable this by default?
